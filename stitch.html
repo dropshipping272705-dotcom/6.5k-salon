@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VOGUE UNISEX SALON | The Nocturnal Atelier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container": "#201f1f",
+                        "surface-bright": "#3a3939",
+                        "tertiary-fixed": "#5d5f5f",
+                        "secondary": "#c6c6c6",
+                        "tertiary-fixed-dim": "#454747",
+                        "primary": "#ffffff",
+                        "error-container": "#93000a",
+                        "tertiary": "#e2e2e2",
+                        "primary-fixed": "#5e5e5d",
+                        "on-tertiary": "#1a1c1c",
+                        "on-background": "#e5e2e1",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "on-tertiary-fixed": "#ffffff",
+                        "background": "#131313",
+                        "on-tertiary-fixed-variant": "#e2e2e2",
+                        "on-tertiary-container": "#000000",
+                        "inverse-primary": "#5e5e5d",
+                        "surface-container-highest": "#353534",
+                        "outline": "#919191",
+                        "secondary-fixed": "#c6c6c6",
+                        "secondary-fixed-dim": "#ababab",
+                        "secondary-container": "#464747",
+                        "error": "#ffb4ab",
+                        "on-surface-variant": "#c6c6c6",
+                        "surface": "#131313",
+                        "surface-dim": "#131313",
+                        "on-surface": "#e5e2e1",
+                        "inverse-on-surface": "#313030",
+                        "surface-variant": "#353534",
+                        "on-secondary-fixed-variant": "#3a3c3c",
+                        "on-secondary-container": "#e3e2e2",
+                        "tertiary-container": "#909191",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-container-low": "#1c1b1b",
+                        "primary-fixed-dim": "#464746",
+                        "on-primary-fixed": "#ffffff",
+                        "on-primary-fixed-variant": "#e3e2e0",
+                        "surface-tint": "#c7c6c4",
+                        "on-primary-container": "#000000",
+                        "inverse-surface": "#e5e2e1",
+                        "on-primary": "#1b1c1b",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary": "#1a1c1c",
+                        "on-error": "#690005",
+                        "surface-container-high": "#2a2a2a",
+                        "outline-variant": "#474747",
+                        "primary-container": "#d5d4d2"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #050505; color: #e5e2e1; }
+        .font-noto-serif { font-family: 'Noto Serif', serif; }
+        .font-manrope { font-family: 'Manrope', sans-serif; }
+        .marble-bg {
+            background-color: #d5d4d2;
+            background-image: linear-gradient(45deg, rgba(0,0,0,0.05) 25%, transparent 25%, transparent 50%, rgba(0,0,0,0.05) 50%, rgba(0,0,0,0.05) 75%, transparent 75%, transparent);
+            background-size: 100px 100px;
+            color: #1b1c1b;
+        }
+        .text-glow { text-shadow: 0 0 15px rgba(255,255,255,0.3); }
+        .silver-glow { box-shadow: 0 0 40px rgba(255, 255, 255, 0.08); }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-neutral-950/80 backdrop-blur-xl shadow-[0_0_40px_rgba(255,255,255,0.05)]">
+<div class="flex justify-between items-center px-6 py-5 w-full max-w-none">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-neutral-100 hover:opacity-80 transition-all duration-300">menu</span>
+<h1 class="font-noto-serif tracking-tighter uppercase text-lg font-bold text-neutral-100 tracking-widest">VOGUE UNISEX SALON</h1>
+</div>
+<button class="text-white font-manrope text-[10px] tracking-widest uppercase font-bold border-b border-white/30 pb-1 hover:opacity-80 transition-all duration-300">CONCIERGE</button>
+</div>
+</header>
+<main>
+<!-- Immersive Hero -->
+<section class="relative h-screen w-full overflow-hidden flex items-center justify-center">
+<div class="absolute inset-0 bg-black/60 z-10"></div>
+<img class="absolute inset-0 w-full h-full object-cover grayscale opacity-60" data-alt="cinematic slow motion video still of a high-end luxury salon interior with dark marble surfaces and soft focused ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsQUFP-gR2J1YsdPWYOvJpuIHG9Rl5A1MYlo-W5o3MtkvN71lKNAwqZ_ag-TAfIkUey7kyyfI_91AVUs5BamBIBYuWJuW3dAWsLXAOOP0jmLfIo5J3xcU74XYwe77XeuC5Wmb_lCHZiTZfDjfh3B1HXVjzYVzFB7RWXs-fytExkAWzal3wm3MOnRC48vfVwD1IKwGiPe7wHdWMPggH2R9yjFRjnc0jHlgzZNhBvyu_RG5DceinsoE3nEsH727tkMyECEiQyYH2Jg"/>
+<div class="relative z-20 text-center px-6 max-w-lg">
+<h2 class="font-noto-serif text-4xl md:text-6xl text-tertiary leading-tight tracking-tighter text-glow">
+                    Mastering the Art of <br/>
+<span class="italic font-normal">Hair &amp; Nails.</span><br/>
+                    For Him &amp; Her.
+                </h2>
+<div class="mt-12 flex flex-col items-center gap-6">
+<div class="w-px h-16 bg-gradient-to-b from-transparent to-white/40"></div>
+<p class="font-manrope text-[10px] uppercase tracking-[0.4em] text-secondary">Explore the Atelier</p>
+</div>
+</div>
+</section>
+<!-- The Story -->
+<section class="marble-bg py-24 px-6 relative overflow-hidden">
+<div class="max-w-screen-xl mx-auto grid grid-cols-1 gap-16">
+<div class="space-y-8">
+<span class="font-manrope text-[10px] uppercase tracking-[0.5em] text-on-surface-variant opacity-60">Legacy of Excellence</span>
+<h2 class="font-noto-serif text-3xl leading-snug tracking-tight text-on-primary">Our sanctuary blends elite training with curated products from the world's most prestigious maisons.</h2>
+<p class="font-manrope text-sm leading-relaxed text-on-primary/70 max-w-md">Every stroke, every cut, and every detail is an intentional act of artistry designed for the discerning individual.</p>
+</div>
+<div class="relative rounded-xl overflow-hidden silver-glow group aspect-square md:aspect-video">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="luxury salon furniture with minimalist design, dark leather chairs and large circular mirrors on a textured wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIIqVajCGV3NLnhNrBU5ZbnoUbqtGKJ09qVLYas5ZVK3m5rQK0-6ZHiu1ibIGf4GK8vdZ6ynJnAVJRIST0kuNFXN1tDzZBUKtMS19dfwfASJs7iwQmpH93PO1JzUw0zE-fzeVEPf1e9xT_KTx_tC2hVfeQCJI_-NXjbVHaJc8ZHh4HTS2ZKHUo_wEp0XvkH3ENGtNI2XbIVKHHPkhnaGjZe0wOqJyQKEsjaocNZ6blrZb-UZA_qRratmc-cnh0YqjyY44JkGO3Ug"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<div class="bg-surface-container-low/90 backdrop-blur-md p-6 rounded-lg border border-white/10">
+<p class="font-manrope text-[10px] uppercase tracking-widest text-primary mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-xs">location_on</span> Sangareddy Atelier
+                            </p>
+<p class="font-manrope text-xs text-secondary leading-relaxed">4-7-3/4/1/5/A/1, Marepally, Balaji Nagar, Ahmed Nagar, Sangareddy, Telangana 502001</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Service Portfolios -->
+<section class="bg-surface py-24">
+<div class="px-6 space-y-24">
+<!-- Gentlemen's Grooming -->
+<div class="flex flex-col gap-8">
+<div class="flex items-end justify-between border-b border-white/5 pb-4">
+<h3 class="font-noto-serif text-2xl uppercase tracking-tighter text-tertiary">Gentlemen's<br/>Grooming</h3>
+<span class="font-manrope text-[10px] tracking-widest opacity-40">01</span>
+</div>
+<div class="relative h-96 w-full rounded-xl overflow-hidden group">
+<img class="w-full h-full object-cover grayscale brightness-75 group-hover:scale-105 transition-transform duration-1000" data-alt="close-up of a professional barber performing a precise beard trim on a male client in a dark moodily lit studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI2YFYyoIHs8lrTTXtw2cLQZPvKONVXFLcjYA82dS-0u27ylGJv9MhAkF9l7m6_0VWC3QDJOhzaQ-ZPc002OhqpuyTm-IRPzzt6sY3o1ZwlNWw9ZSnF4LsVHapr6nl9lsZt420pZaWEAYlB4VCxQdVrsTjpASw0a1njOLg7XhJoRo-fzJFhOOY7ChNen_eneIxLZCPLraXI_ZwNTCi_ffwvY4Oupv8BpKbc63AvIPY7cySavquf_t7Pub4a3mn2KRMMaT5qcaI0w"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-transparent to-transparent opacity-60"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<button class="w-fit bg-primary text-on-primary px-8 py-3 rounded-full font-manrope text-[10px] uppercase font-bold tracking-widest silver-glow hover:scale-105 transition-transform duration-300">Book This Service</button>
+</div>
+</div>
+</div>
+<!-- Ladies' Hair Styling -->
+<div class="flex flex-col gap-8">
+<div class="flex items-end justify-between border-b border-white/5 pb-4">
+<h3 class="font-noto-serif text-2xl uppercase tracking-tighter text-tertiary text-right w-full">Ladies' Hair<br/>Styling</h3>
+<span class="font-manrope text-[10px] tracking-widest opacity-40 order-first">02</span>
+</div>
+<div class="relative h-96 w-full rounded-xl overflow-hidden group">
+<img class="w-full h-full object-cover brightness-90 group-hover:scale-105 transition-transform duration-1000" data-alt="woman with long flowing silky hair being styled in a high-end salon, soft elegant lighting highlighting the hair texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4cigZv6vpw3A0HUOa6HW6S6QYZJXz3FGrRm8-mBwIEZynyLOVr8M9ahk7SDDCSYwexJ4rUdN_FREigh49kLOS5nj7utPiFQhXTB6PI9QLi2nP7evQam5C95iS0Z44kPhZqGRG0mtVBO0jrxma196QJ-5VXkPs9ei22i63Tav_TSDPWBLH-0oULRVVRKwDPyFFJEd1CqWovKiGVdu40uCDRfY5vVzIH5Ka92uji4RcYixm9txwRiMdyr5BpQ3pZjozU7JiI5nb-Q"/>
+<div class="absolute inset-0 bg-gradient-to-l from-background via-transparent to-transparent opacity-40"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end items-end">
+<button class="w-fit bg-primary text-on-primary px-8 py-3 rounded-full font-manrope text-[10px] uppercase font-bold tracking-widest silver-glow hover:scale-105 transition-transform duration-300">Book This Service</button>
+</div>
+</div>
+</div>
+<!-- Exclusive Nail Artistry -->
+<div class="flex flex-col gap-8">
+<div class="flex items-end justify-between border-b border-white/5 pb-4">
+<h3 class="font-noto-serif text-2xl uppercase tracking-tighter text-tertiary">Exclusive<br/>Nail Artistry</h3>
+<span class="font-manrope text-[10px] tracking-widest opacity-40">03</span>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="marble-bg aspect-[3/4] rounded-xl flex items-center justify-center p-4 silver-glow group overflow-hidden">
+<img class="w-full h-full object-cover rounded-lg transition-transform duration-700 group-hover:scale-110" data-alt="macro photo of avant-garde nail art with metallic silver and black marble patterns on a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUBxy47soAi_9_q8oDi1Ut_duqIkkktb8rwXWIVrEHfbd8XTmI492c3lrERAAApQG65QhFTDAWr-f7enEJkqwMR7AZ_t7ZqhGBfTu7qQTvgiBIJHh3ZMDNgqYeq_sBxienYsYUvrlHdKz1WvfL9qyWkx9k6gH-mKobTH1wQ91MziNluKRhN8m9CjwOvc7S83PUm2UkyF18w4hFWHx2ia_6LHI2ZAAZg0ou5z4rUA9wNVX0EeZzeuWjPyEN9fCGp_if9UctKpW77w"/>
+</div>
+<div class="flex flex-col justify-between py-4">
+<p class="font-manrope text-xs text-secondary leading-relaxed italic">"Miniature canvases of luxury crafted for your fingertips."</p>
+<button class="w-full bg-surface-container-highest text-primary border border-white/10 px-4 py-3 rounded-full font-manrope text-[8px] uppercase font-bold tracking-widest hover:bg-primary hover:text-black transition-colors duration-300">Book This Service</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Client Testimonials -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="px-6 mb-12">
+<h2 class="font-noto-serif text-3xl text-tertiary tracking-tighter">The Patron's Voice</h2>
+</div>
+<div class="flex overflow-x-auto gap-6 px-6 hide-scrollbar pb-8">
+<!-- Card 1 -->
+<div class="min-w-[85vw] bg-surface-container p-8 rounded-2xl border border-white/5 space-y-6">
+<div class="flex gap-1 text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-manrope text-sm leading-relaxed text-secondary italic">"The most refined salon experience in Telangana. Their attention to hair detail is simply unparalleled."</p>
+<p class="font-manrope text-[10px] uppercase tracking-widest text-primary">— Rajesh K.</p>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[85vw] bg-surface-container p-8 rounded-2xl border border-white/5 space-y-6">
+<div class="flex gap-1 text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-manrope text-sm leading-relaxed text-secondary italic">"Absolute masterpiece nail artistry. The marble texture in the studio matches the luxury of their work."</p>
+<p class="font-manrope text-[10px] uppercase tracking-widest text-primary">— Ananya S.</p>
+</div>
+</div>
+</section>
+<!-- Booking & Concierge -->
+<section class="marble-bg py-24 px-6">
+<div class="bg-surface-container-lowest/90 backdrop-blur-2xl p-8 rounded-3xl silver-glow border border-white/10 space-y-10">
+<div class="text-center space-y-2">
+<h2 class="font-noto-serif text-3xl text-primary tracking-tighter">Reserve Your Session</h2>
+<p class="font-manrope text-[10px] uppercase tracking-[0.3em] text-secondary opacity-60">Personalized Grooming &amp; Artistry</p>
+</div>
+<form class="space-y-8">
+<div class="space-y-6">
+<div class="relative">
+<label class="font-manrope text-[10px] uppercase tracking-widest text-secondary block mb-2">Service Selection</label>
+<select class="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-manrope text-sm text-primary focus:outline-none focus:border-primary transition-colors appearance-none">
+<option value="nails">Nails Treatment</option>
+<option value="haircut">Hair Cut</option>
+<option value="root">Root Touchup</option>
+</select>
+<span class="material-symbols-outlined absolute bottom-4 right-0 text-secondary pointer-events-none">expand_more</span>
+</div>
+<div>
+<label class="font-manrope text-[10px] uppercase tracking-widest text-secondary block mb-2">Full Name</label>
+<input class="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-manrope text-sm text-primary focus:outline-none focus:border-primary transition-colors placeholder:text-surface-bright" placeholder="Your Name" type="text"/>
+</div>
+<div>
+<label class="font-manrope text-[10px] uppercase tracking-widest text-secondary block mb-2">Preferred Date</label>
+<input class="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-manrope text-sm text-primary focus:outline-none focus:border-primary transition-colors" type="date"/>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-5 rounded-full font-manrope text-xs uppercase font-extrabold tracking-[0.2em] silver-glow active:scale-95 transition-transform duration-150" type="submit">Confirm Reservation</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 bg-neutral-950 border-t border-white/5 px-8 flex flex-col items-center gap-10">
+<div class="flex flex-col items-center gap-4">
+<h4 class="text-neutral-100 font-noto-serif italic text-xl tracking-widest">VOGUE</h4>
+<div class="flex gap-6">
+<a class="font-manrope text-xs tracking-widest text-neutral-600 hover:text-white transition-colors duration-300" href="#">The Story</a>
+<a class="font-manrope text-xs tracking-widest text-neutral-600 hover:text-white transition-colors duration-300" href="#">Services</a>
+<a class="font-manrope text-xs tracking-widest text-neutral-600 hover:text-white transition-colors duration-300" href="#">Artistry</a>
+</div>
+</div>
+<p class="font-manrope text-[8px] tracking-[0.3em] text-neutral-400 text-center opacity-50 uppercase">© 2024 VOGUE UNISEX SALON. THE NOCTURNAL ATELIER.</p>
+</footer>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-8 right-8 z-50 flex items-center gap-4">
+<div class="bg-neutral-900/90 backdrop-blur-2xl rounded-full px-6 py-3 flex items-center gap-4 shadow-[0_0_30px_rgba(255,255,255,0.15)]">
+<div class="flex items-center gap-3 text-neutral-400 px-3 hover:scale-105 transition-transform duration-500">
+<span class="material-symbols-outlined text-white">chat</span>
+<span class="font-manrope text-[10px] tracking-[0.2em] uppercase font-bold text-white">Concierge</span>
+</div>
+<div class="flex items-center gap-3 bg-white text-black rounded-full px-5 py-2 hover:scale-105 transition-transform duration-500">
+<span class="material-symbols-outlined">event_available</span>
+<span class="font-manrope text-[10px] tracking-[0.2em] uppercase font-bold">Book Now</span>
+</div>
+</div>
+</nav>
+<!-- WhatsApp Floating Action -->
+<a class="fixed bottom-28 right-8 z-50 w-14 h-14 bg-white rounded-full flex items-center justify-center silver-glow text-black transition-all duration-300 hover:scale-110 active:scale-95" href="https://wa.me/919154004114">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+</a>
+</body></html>
