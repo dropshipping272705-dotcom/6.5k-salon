@@ -15,6 +15,7 @@ function ScrollToTop() {
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -47,8 +48,23 @@ function App() {
             <Link to={location.pathname === '/' ? '#gallery' : '/#gallery'} className="text-xs uppercase tracking-[0.2em] hover:text-tertiary transition-colors">Gallery</Link>
             <Link to="/services#booking" className="text-xs uppercase tracking-[0.2em] text-tertiary font-bold hover:opacity-80 transition-opacity">Book Appointment</Link>
           </nav>
-          <button className="md:hidden material-symbols-outlined text-2xl">menu</button>
+          <button 
+            onClick={() => setIsMenuOpen(!isMenuOpen)} 
+            className="md:hidden material-symbols-outlined text-2xl"
+          >
+            {isMenuOpen ? 'close' : 'menu'}
+          </button>
         </div>
+
+        {/* Mobile Navigation Dropdown */}
+        {isMenuOpen && (
+          <nav className="md:hidden absolute top-full left-0 w-full bg-surface-container/95 backdrop-blur-xl border-b border-white/10 py-6 px-6 flex flex-col gap-6 shadow-2xl">
+            <Link to="/" onClick={() => setIsMenuOpen(false)} className="text-sm uppercase tracking-[0.2em] hover:text-tertiary transition-colors">Home</Link>
+            <Link to="/services" onClick={() => setIsMenuOpen(false)} className="text-sm uppercase tracking-[0.2em] hover:text-tertiary transition-colors">Services</Link>
+            <Link to={location.pathname === '/' ? '#gallery' : '/#gallery'} onClick={() => setIsMenuOpen(false)} className="text-sm uppercase tracking-[0.2em] hover:text-tertiary transition-colors">Gallery</Link>
+            <Link to="/services#booking" onClick={() => setIsMenuOpen(false)} className="text-sm uppercase tracking-[0.2em] text-tertiary font-bold hover:opacity-80 transition-opacity">Book Appointment</Link>
+          </nav>
+        )}
       </header>
 
       {/* Route Views */}
