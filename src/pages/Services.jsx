@@ -194,6 +194,7 @@ export default function Services() {
     fullName: '',
     preferredDate: '',
     preferredTime: '',
+    address: '',
   });
 
   const [serviceLocation, setServiceLocation] = useState('shop');
@@ -240,7 +241,10 @@ export default function Services() {
     
     const servicesList = formData.selectedServices.join(', ');
     const locationText = serviceLocation === 'home' ? 'At Home' : 'At Shop';
-    const message = `Hi, I would like to book an appointment (${locationText}) for:\n* ${servicesList}\n\nName: ${formData.fullName}\nDate: ${formData.preferredDate}\nTime: ${formData.preferredTime}`;
+    let message = `Hi, I would like to book an appointment (${locationText}) for:\n* ${servicesList}\n\nName: ${formData.fullName}\nDate: ${formData.preferredDate}\nTime: ${formData.preferredTime}`;
+    if (serviceLocation === 'home' && formData.address) {
+      message += `\nAddress: ${formData.address}`;
+    }
     const whatsappUrl = `https://wa.me/919160856138?text=${encodeURIComponent(message)}`;
     
     window.open(whatsappUrl, '_blank');
@@ -252,7 +256,7 @@ export default function Services() {
           .insert([
             {
               full_name: formData.fullName,
-              service_type: servicesList + ` (${serviceLocation === 'home' ? 'At Home' : 'At Shop'})`,
+              service_type: servicesList + ` (${serviceLocation === 'home' ? 'At Home - ' + formData.address : 'At Shop'})`,
               booking_date: `${formData.preferredDate} ${formData.preferredTime}`,
               status: 'pending'
             }
@@ -263,7 +267,7 @@ export default function Services() {
       }
     }
     
-    setFormData({ selectedServices: [], fullName: '', preferredDate: '', preferredTime: '' });
+    setFormData({ selectedServices: [], fullName: '', preferredDate: '', preferredTime: '', address: '' });
   };
 
   return (
@@ -402,6 +406,20 @@ export default function Services() {
                   className="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-manrope text-sm text-primary focus:outline-none focus:border-primary transition-colors placeholder:text-surface-bright" 
                 />
               </div>
+
+              {serviceLocation === 'home' && (
+                <div>
+                  <label className="font-manrope text-[10px] uppercase tracking-widest text-secondary block mb-2">Service Address</label>
+                  <textarea 
+                    required
+                    value={formData.address}
+                    onChange={(e) => setFormData({...formData, address: e.target.value})}
+                    placeholder="Enter your full address"
+                    className="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-manrope text-sm text-primary focus:outline-none focus:border-primary transition-colors placeholder:text-surface-bright resize-none" 
+                    rows="2"
+                  ></textarea>
+                </div>
+              )}
               
               <div className="grid grid-cols-2 gap-8">
                 <div>
