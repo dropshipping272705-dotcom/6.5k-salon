@@ -196,6 +196,28 @@ export default function Services() {
     preferredTime: '',
   });
 
+  const [isBookingVisible, setIsBookingVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsBookingVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    const bookingElement = document.getElementById('booking');
+    if (bookingElement) {
+      observer.observe(bookingElement);
+    }
+
+    return () => {
+      if (bookingElement) {
+        observer.unobserve(bookingElement);
+      }
+    };
+  }, []);
+
   const toggleService = (serviceName) => {
     setFormData((prev) => {
       const isSelected = prev.selectedServices.includes(serviceName);
@@ -375,6 +397,30 @@ export default function Services() {
           </form>
         </div>
       </section>
+
+      {/* Floating Booking Action Bar */}
+      {formData.selectedServices.length > 0 && !isBookingVisible && (
+        <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-40 w-[90%] max-w-md pointer-events-none">
+          <div className="bg-primary text-on-primary rounded-full px-6 py-4 flex items-center justify-between shadow-2xl border border-white/20 silver-glow pointer-events-auto animate-fade-in">
+            <div className="flex flex-col">
+              <span className="font-manrope text-[10px] uppercase tracking-widest opacity-80">Your Selection</span>
+              <span className="font-noto-serif text-sm md:text-base font-bold">{formData.selectedServices.length} Service{formData.selectedServices.length > 1 ? 's' : ''} Added</span>
+            </div>
+            <button 
+              onClick={() => {
+                const element = document.getElementById('booking');
+                if (element) {
+                  const y = element.getBoundingClientRect().top + window.scrollY - 100;
+                  window.scrollTo({ top: y, behavior: 'smooth' });
+                }
+              }}
+              className="bg-background text-primary px-4 py-2 rounded-full font-manrope text-[10px] uppercase tracking-widest font-bold hover:scale-105 transition-transform"
+            >
+              Continue &rarr;
+            </button>
+          </div>
+        </div>
+      )}
 
     </main>
   );
