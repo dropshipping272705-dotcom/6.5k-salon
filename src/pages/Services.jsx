@@ -196,6 +196,7 @@ export default function Services() {
     preferredTime: '',
   });
 
+  const [serviceLocation, setServiceLocation] = useState('shop');
   const [isBookingVisible, setIsBookingVisible] = useState(false);
 
   useEffect(() => {
@@ -238,7 +239,8 @@ export default function Services() {
     }
     
     const servicesList = formData.selectedServices.join(', ');
-    const message = `Hi, I would like to book an appointment for:\n* ${servicesList}\n\nName: ${formData.fullName}\nDate: ${formData.preferredDate}\nTime: ${formData.preferredTime}`;
+    const locationText = serviceLocation === 'home' ? 'At Home' : 'At Shop';
+    const message = `Hi, I would like to book an appointment (${locationText}) for:\n* ${servicesList}\n\nName: ${formData.fullName}\nDate: ${formData.preferredDate}\nTime: ${formData.preferredTime}`;
     const whatsappUrl = `https://wa.me/919160856138?text=${encodeURIComponent(message)}`;
     
     window.open(whatsappUrl, '_blank');
@@ -250,7 +252,7 @@ export default function Services() {
           .insert([
             {
               full_name: formData.fullName,
-              service_type: servicesList,
+              service_type: servicesList + ` (${serviceLocation === 'home' ? 'At Home' : 'At Shop'})`,
               booking_date: `${formData.preferredDate} ${formData.preferredTime}`,
               status: 'pending'
             }
@@ -275,6 +277,39 @@ export default function Services() {
           <h2 className="font-noto-serif text-4xl md:text-5xl leading-tight tracking-tighter text-tertiary">
             The Complete Menu
           </h2>
+
+          {/* Location Toggle */}
+          <div className="pt-8 flex justify-center">
+            <div className="inline-flex bg-black/40 p-1 rounded-full border border-white/10">
+              <button 
+                onClick={() => {
+                  setServiceLocation('shop');
+                  setFormData(prev => ({ ...prev, selectedServices: [] })); // Clear cart on switch
+                }}
+                className={`px-8 py-3 rounded-full font-manrope text-xs uppercase tracking-widest font-bold transition-all duration-300 ${
+                  serviceLocation === 'shop' 
+                    ? 'bg-primary text-on-primary silver-glow' 
+                    : 'text-secondary hover:text-white'
+                }`}
+              >
+                At Shop
+              </button>
+              <button 
+                onClick={() => {
+                  setServiceLocation('home');
+                  setFormData(prev => ({ ...prev, selectedServices: [] })); // Clear cart on switch
+                }}
+                className={`px-8 py-3 rounded-full font-manrope text-xs uppercase tracking-widest font-bold transition-all duration-300 ${
+                  serviceLocation === 'home' 
+                    ? 'bg-primary text-on-primary silver-glow' 
+                    : 'text-secondary hover:text-white'
+                }`}
+              >
+                At Home
+              </button>
+            </div>
+          </div>
+
           <div className="pt-8">
             <div className="w-px h-16 bg-gradient-to-b from-white/20 to-transparent mx-auto"></div>
           </div>
@@ -284,7 +319,9 @@ export default function Services() {
       {/* Menu List */}
       <section className="marble-bg py-24 px-6 relative overflow-hidden">
         <div className="max-w-4xl mx-auto space-y-24">
-          {menuCategories.map((category, idx) => (
+          {menuCategories
+            .filter(category => serviceLocation === 'shop' || category.title.toLowerCase().includes('spa'))
+            .map((category, idx) => (
             <div key={idx} className="space-y-8">
               <div className="border-b border-black/10 pb-4">
                 <h3 className="font-noto-serif text-3xl uppercase tracking-tighter text-black">{category.title}</h3>
