@@ -64,10 +64,10 @@ export default function Home() {
       {/* About Section */}
       <section id="about" ref={addToRefs} className="bg-surface py-24 md:py-32 px-6 overflow-hidden">
         <div className="max-w-screen-md mx-auto text-center space-y-8">
-          <span className="font-manrope text-[10px] uppercase tracking-[0.5em] text-on-surface-variant opacity-60">
+          <span className="font-manrope text-[10px] uppercase tracking-[0.5em] text-tertiary opacity-90">
             The Nocturnal Experience
           </span>
-          <h2 className="font-noto-serif text-3xl md:text-5xl leading-tight tracking-tighter text-on-primary">
+          <h2 className="font-noto-serif text-3xl md:text-5xl leading-tight tracking-tighter text-tertiary">
             Where sophisticated artistry meets unparalleled luxury.
           </h2>
           <p className="font-manrope text-sm md:text-base leading-relaxed text-secondary max-w-2xl mx-auto">
@@ -118,7 +118,7 @@ export default function Home() {
         <div className="max-w-screen-xl mx-auto px-6 space-y-24">
           
           <div className="text-center mb-16">
-            <h2 className="font-noto-serif text-4xl tracking-tighter text-on-primary">Our Signature Services</h2>
+            <h2 className="font-noto-serif text-4xl tracking-tighter text-tertiary">Our Signature Services</h2>
             <Link to="/services" className="mt-8 inline-block w-fit bg-primary text-on-primary px-8 py-4 rounded-full font-manrope text-[10px] uppercase font-bold tracking-widest silver-glow hover:scale-105 transition-transform duration-300">
               View Full Menu &amp; Book
             </Link>

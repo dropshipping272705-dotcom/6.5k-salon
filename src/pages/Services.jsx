@@ -269,10 +269,10 @@ export default function Services() {
       {/* Services Header */}
       <section className="bg-surface py-20 px-6 overflow-hidden">
         <div className="max-w-screen-md mx-auto text-center space-y-6">
-          <span className="font-manrope text-[10px] uppercase tracking-[0.5em] text-on-surface-variant opacity-60">
+          <span className="font-manrope text-[10px] uppercase tracking-[0.5em] text-tertiary opacity-90">
             Our Offerings
           </span>
-          <h2 className="font-noto-serif text-4xl md:text-5xl leading-tight tracking-tighter text-on-primary">
+          <h2 className="font-noto-serif text-4xl md:text-5xl leading-tight tracking-tighter text-tertiary">
             The Complete Menu
           </h2>
           <div className="pt-8">
