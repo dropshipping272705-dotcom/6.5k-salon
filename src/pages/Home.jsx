@@ -80,36 +80,15 @@ export default function Home() {
       </section>
 
       {/* The Story */}
-      <section ref={addToRefs} className="marble-bg py-24 px-6 relative overflow-hidden">
-        <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          <div className="space-y-8">
-            <span className="font-manrope text-[10px] uppercase tracking-[0.5em] text-on-surface-variant opacity-60">Legacy of Excellence</span>
-            <h2 className="font-noto-serif text-3xl leading-snug tracking-tight text-on-primary">
-              Our sanctuary blends elite training with curated products from the world's most prestigious maisons.
-            </h2>
-            <p className="font-manrope text-sm leading-relaxed text-on-primary/70 max-w-md">
-              Every stroke, every cut, and every detail is an intentional act of artistry designed for the discerning individual.
-            </p>
-          </div>
-          
-          <div className="relative rounded-xl overflow-hidden silver-glow group aspect-square">
-            <img 
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-              alt="luxury salon interior" 
-              src="/assets/salon_interior_luxury.png"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-            <div className="absolute bottom-6 left-6 right-6">
-              <div className="bg-surface-container-low/90 backdrop-blur-md p-6 rounded-lg border border-white/10">
-                <p className="font-manrope text-[10px] uppercase tracking-widest text-primary mb-2 flex items-center gap-2">
-                  <span className="material-symbols-outlined text-xs">location_on</span> Dilsukhnagar Atelier
-                </p>
-                <p className="font-manrope text-xs text-secondary leading-relaxed">
-                  Near Bus Depot, back side line, near Basham School, Shalivahana Nagar, Dilsukhnagar, Hyderabad, Telangana 500036
-                </p>
-              </div>
-            </div>
-          </div>
+      <section ref={addToRefs} className="marble-bg py-32 md:py-48 px-6 relative overflow-hidden flex items-center justify-center">
+        <div className="max-w-screen-xl mx-auto text-center space-y-10 md:space-y-12">
+          <span className="font-manrope text-xs md:text-sm uppercase tracking-[0.5em] text-on-surface-variant opacity-60">Legacy of Excellence</span>
+          <h2 className="font-noto-serif text-4xl md:text-6xl lg:text-7xl leading-tight md:leading-tight tracking-tight text-on-primary max-w-5xl mx-auto">
+            Our sanctuary blends elite training with curated products from the world's most prestigious maisons.
+          </h2>
+          <p className="font-manrope text-base md:text-xl leading-relaxed text-on-primary/70 max-w-2xl mx-auto">
+            Every stroke, every cut, and every detail is an intentional act of artistry designed for the discerning individual.
+          </p>
         </div>
       </section>
 
@@ -167,14 +146,12 @@ export default function Home() {
             <span className="font-manrope text-[10px] tracking-widest opacity-60 font-bold">PORTFOLIO</span>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
             {[
-              "salon_interior_luxury.png",
-              "mens_grooming.png",
-              "ladies_styling.png",
-              "nail_artistry.png",
-              "salon_tools.png",
-              "salon_mirror.png"
+              "media__1779351373861.png",
+              "media__1779351373924.png",
+              "media__1779351373964.png",
+              "media__1779351373998.png"
             ].map((imgUrl, idx) => (
               <div key={idx} className="aspect-square bg-neutral-900 rounded-lg overflow-hidden group border border-white/10 shadow-lg">
                 <img 

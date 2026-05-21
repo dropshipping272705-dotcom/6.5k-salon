@@ -7,23 +7,83 @@ const supabase = (supabaseUrl !== 'YOUR_SUPABASE_URL') ? createClient(supabaseUr
 
 const menuCategories = [
   {
-    title: "Flavoured Waxing",
+    title: "Bleach",
     items: [
-      { name: "Upper Lip", price: "50" },
-      { name: "Chin", price: "50" },
-      { name: "Side lock's", price: "60" },
-      { name: "Lower Lip", price: "40" },
-      { name: "Jaw Line", price: "60" },
-      { name: "Forehead", price: "50" },
-      { name: "Neck", price: "70" },
-      { name: "Full Face", price: "350" },
-      { name: "Full Hand Waxing", price: "300" },
-      { name: "Half Hand Waxing", price: "200" },
-      { name: "Under Arm's", price: "70" },
-      { name: "Half Leg's", price: "300" },
+      { name: "Face & Neck", price: "250" },
+      { name: "Face, Neck & Blouse Line", price: "350" },
+      { name: "Full Hands", price: "300" },
       { name: "Full Leg's", price: "400" },
-      { name: "Front / Back", price: "700" },
-      { name: "Full Body", price: "1400" }
+      { name: "Under Arms", price: "100" },
+      { name: "Feet", price: "100" },
+      { name: "Front / Back", price: "600" },
+      { name: "Upperlip", price: "40" },
+      { name: "Full Body", price: "1200" }
+    ]
+  },
+  {
+    title: "Cleanup's",
+    items: [
+      { name: "Classic Cleanup", price: "350" },
+      { name: "Fresh Fruit Cleanup", price: "450" },
+      { name: "Pearl Cleanup", price: "500" },
+      { name: "Diamond Cleanup", price: "500" },
+      { name: "Gold Cleanup", price: "500" }
+    ]
+  },
+  {
+    title: "Entry Level Facial",
+    items: [
+      { name: "Fruit Facial", price: "500" },
+      { name: "Skin Moisturizing Facial", price: "600" },
+      { name: "Glow Facial", price: "700" },
+      { name: "Herbal Facial", price: "800" },
+      { name: "Gold Facial", price: "800" },
+      { name: "Platinum Facial", price: "900" },
+      { name: "Pearl Facial", price: "900" }
+    ]
+  },
+  {
+    title: "Mid Level Facial",
+    items: [
+      { name: "Tan Removal Facial", price: "1100" },
+      { name: "Acne Reducing Facial", price: "1200" },
+      { name: "Skin Lightening Facial", price: "1300" },
+      { name: "Diamond Facial", price: "1500" },
+      { name: "Insta Shine Facial", price: "1400" }
+    ]
+  },
+  {
+    title: "Threading",
+    items: [
+      { name: "Eye brows", price: "30" },
+      { name: "Upper Lip", price: "20" },
+      { name: "Lower Lip", price: "30" },
+      { name: "Chin", price: "40" },
+      { name: "Side lock's", price: "40" },
+      { name: "Jaw Line", price: "30" },
+      { name: "Forehead", price: "40" },
+      { name: "Neck", price: "40" },
+      { name: "Full Face", price: "250" }
+    ]
+  },
+  {
+    title: "Waxing",
+    items: [
+      { name: "Upper Lip", price: "40" },
+      { name: "Chin", price: "40" },
+      { name: "Side lock's", price: "50" },
+      { name: "Lower Lip", price: "30" },
+      { name: "Jaw Line", price: "50" },
+      { name: "Forehead", price: "40" },
+      { name: "Neck", price: "50" },
+      { name: "Full Face", price: "300" },
+      { name: "Full Hand Waxing", price: "200" },
+      { name: "Half Hand Waxing", price: "150" },
+      { name: "Under Arm's", price: "50" },
+      { name: "Half Leg's", price: "200" },
+      { name: "Full Leg's", price: "300" },
+      { name: "Front / Back", price: "500" },
+      { name: "Full Body", price: "1100" }
     ]
   },
   {
