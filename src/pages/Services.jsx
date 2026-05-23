@@ -497,6 +497,8 @@ export default function Services() {
                   <input 
                     type="time"
                     required
+                    min="08:00"
+                    max="22:00"
                     value={formData.preferredTime}
                     onChange={(e) => setFormData({...formData, preferredTime: e.target.value})}
                     className="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-manrope text-sm text-primary focus:outline-none focus:border-primary transition-colors [&::-webkit-calendar-picker-indicator]:invert" 

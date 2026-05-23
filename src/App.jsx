@@ -88,7 +88,7 @@ function App() {
           <div className="space-y-4">
             <h4 className="font-manrope text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Atelier Info</h4>
             <ul className="space-y-3 font-manrope text-sm text-secondary">
-              <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[16px]">schedule</span> 10:00 AM - 9:00 PM</li>
+              <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[16px]">schedule</span> 8:00 AM - 10:00 PM</li>
               <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[16px]">call</span> +91 91608 56138</li>
               <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[16px]">mail</span> manassalon@info.com</li>
             </ul>
