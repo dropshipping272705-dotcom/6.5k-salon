@@ -494,15 +494,43 @@ export default function Services() {
                 </div>
                 <div>
                   <label className="font-manrope text-[10px] uppercase tracking-widest text-secondary block mb-2">Time Slot</label>
-                  <input 
-                    type="time"
+                  <select
                     required
-                    min="08:00"
-                    max="22:00"
                     value={formData.preferredTime}
                     onChange={(e) => setFormData({...formData, preferredTime: e.target.value})}
-                    className="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-manrope text-sm text-primary focus:outline-none focus:border-primary transition-colors [&::-webkit-calendar-picker-indicator]:invert" 
-                  />
+                    className="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-manrope text-sm text-primary focus:outline-none focus:border-primary transition-colors appearance-none cursor-pointer"
+                  >
+                    <option value="" disabled>Select a time</option>
+                    <option value="08:00">08:00 AM</option>
+                    <option value="08:30">08:30 AM</option>
+                    <option value="09:00">09:00 AM</option>
+                    <option value="09:30">09:30 AM</option>
+                    <option value="10:00">10:00 AM</option>
+                    <option value="10:30">10:30 AM</option>
+                    <option value="11:00">11:00 AM</option>
+                    <option value="11:30">11:30 AM</option>
+                    <option value="12:00">12:00 PM</option>
+                    <option value="12:30">12:30 PM</option>
+                    <option value="13:00">01:00 PM</option>
+                    <option value="13:30">01:30 PM</option>
+                    <option value="14:00">02:00 PM</option>
+                    <option value="14:30">02:30 PM</option>
+                    <option value="15:00">03:00 PM</option>
+                    <option value="15:30">03:30 PM</option>
+                    <option value="16:00">04:00 PM</option>
+                    <option value="16:30">04:30 PM</option>
+                    <option value="17:00">05:00 PM</option>
+                    <option value="17:30">05:30 PM</option>
+                    <option value="18:00">06:00 PM</option>
+                    <option value="18:30">06:30 PM</option>
+                    <option value="19:00">07:00 PM</option>
+                    <option value="19:30">07:30 PM</option>
+                    <option value="20:00">08:00 PM</option>
+                    <option value="20:30">08:30 PM</option>
+                    <option value="21:00">09:00 PM</option>
+                    <option value="21:30">09:30 PM</option>
+                    <option value="22:00">10:00 PM</option>
+                  </select>
                 </div>
               </div>
             </div>
