@@ -151,7 +151,10 @@ export default function Home() {
               "media__1779351373861.png",
               "media__1779351373924.png",
               "media__1779351373964.png",
-              "media__1779351373998.png"
+              "media__1779351373998.png",
+              "media__1779555704012.jpg",
+              "media__1779555704036.jpg",
+              "media__1779555704066.jpg"
             ].map((imgUrl, idx) => (
               <div key={idx} className="aspect-square bg-neutral-900 rounded-lg overflow-hidden group border border-white/10 shadow-lg">
                 <img 
