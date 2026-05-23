@@ -56,7 +56,7 @@ export default function Home() {
           </h2>
           <div className="mt-12 flex flex-col items-center gap-6">
             <div className="w-px h-16 bg-gradient-to-b from-transparent to-white/40"></div>
-            <p className="font-manrope text-[10px] uppercase tracking-[0.4em] text-secondary">Explore the Atelier</p>
+            <p className="font-manrope text-[10px] uppercase tracking-[0.4em] text-white">Explore the Atelier</p>
           </div>
         </div>
       </section>
@@ -71,7 +71,7 @@ export default function Home() {
             Where sophisticated artistry meets unparalleled luxury.
           </h2>
           <p className="font-manrope text-sm md:text-base leading-relaxed text-secondary max-w-2xl mx-auto">
-            Welcome to Maan's Unisex Salon. We are an avant-garde studio dedicated to redefining grooming and styling. Inspired by the quiet luxury of nocturnal aesthetics, our space provides an exclusive sanctuary for those who appreciate the finest attention to detail.
+            Welcome to Manas Unisex Salon. We are an avant-garde studio dedicated to redefining grooming and styling. Inspired by the quiet luxury of nocturnal aesthetics, our space provides an exclusive sanctuary for those who appreciate the finest attention to detail.
           </p>
           <div className="pt-8">
             <div className="w-px h-16 bg-gradient-to-b from-white/20 to-transparent mx-auto"></div>

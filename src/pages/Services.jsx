@@ -404,7 +404,7 @@ export default function Services() {
                         className={`px-3 py-1 text-[10px] uppercase tracking-widest font-bold rounded-full transition-colors border ${
                           isSelected 
                             ? 'bg-black text-white border-black' 
-                            : 'bg-transparent text-gray-500 border-gray-300 hover:border-black hover:text-black'
+                            : 'bg-transparent text-black border-black hover:bg-black hover:text-white'
                         }`}
                       >
                         {isSelected ? '✓ Selected' : '+ Add'}

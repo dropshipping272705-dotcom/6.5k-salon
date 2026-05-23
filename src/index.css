@@ -1,53 +1,64 @@
 @import "tailwindcss";
 
 @theme {
-  --color-surface-container: #201f1f;
-  --color-surface-bright: #3a3939;
-  --color-tertiary-fixed: #5d5f5f;
-  --color-secondary: #c6c6c6;
-  --color-tertiary-fixed-dim: #454747;
-  --color-primary: #ffffff;
-  --color-error-container: #93000a;
-  --color-tertiary: #e2e2e2;
-  --color-primary-fixed: #5e5e5d;
-  --color-on-tertiary: #1a1c1c;
-  --color-on-background: #e5e2e1;
-  --color-on-secondary-fixed: #1a1c1c;
-  --color-on-tertiary-fixed: #ffffff;
-  --color-background: #131313;
-  --color-on-tertiary-fixed-variant: #e2e2e2;
-  --color-on-tertiary-container: #000000;
-  --color-inverse-primary: #5e5e5d;
-  --color-surface-container-highest: #353534;
-  --color-outline: #919191;
-  --color-secondary-fixed: #c6c6c6;
-  --color-secondary-fixed-dim: #ababab;
-  --color-secondary-container: #464747;
-  --color-error: #ffb4ab;
-  --color-on-surface-variant: #c6c6c6;
-  --color-surface: #131313;
-  --color-surface-dim: #131313;
-  --color-on-surface: #e5e2e1;
-  --color-inverse-on-surface: #313030;
-  --color-surface-variant: #353534;
-  --color-on-secondary-fixed-variant: #3a3c3c;
-  --color-on-secondary-container: #e3e2e2;
-  --color-tertiary-container: #909191;
-  --color-surface-container-lowest: #0e0e0e;
-  --color-surface-container-low: #1c1b1b;
-  --color-primary-fixed-dim: #464746;
-  --color-on-primary-fixed: #ffffff;
-  --color-on-primary-fixed-variant: #e3e2e0;
-  --color-surface-tint: #c7c6c4;
-  --color-on-primary-container: #000000;
-  --color-inverse-surface: #e5e2e1;
-  --color-on-primary: #1b1c1b;
-  --color-on-error-container: #ffdad6;
-  --color-on-secondary: #1a1c1c;
-  --color-on-error: #690005;
-  --color-surface-container-high: #2a2a2a;
-  --color-outline-variant: #474747;
-  --color-primary-container: #d5d4d2;
+  /* LIGHT & EARTHY THEME - Toasted Almond Base */
+  --color-background: #CEB59E; /* Toasted Almond */
+  --color-on-background: #3A2922; /* Dark Umber */
+  --color-surface: #CEB59E; 
+  --color-on-surface: #3A2922;
+  
+  --color-surface-container: #88937B; /* Muted Sage for cards */
+  --color-surface-container-highest: #88937B;
+  --color-surface-container-lowest: #E8E1D5; /* Linen White for booking box */
+  --color-surface-container-low: #E8E1D5;
+  --color-surface-container-high: #88937B;
+  --color-surface-bright: #CEB59E;
+  --color-surface-dim: #CEB59E;
+  --color-surface-variant: #CEB59E;
+  --color-surface-tint: #CEB59E;
+  
+  --color-primary: #88937B; /* Muted Sage */
+  --color-on-primary: #3A2922; /* Dark Umber */
+  --color-primary-container: #88937B;
+  --color-on-primary-container: #3A2922;
+  
+  --color-secondary: #4C362D; /* Deep Umber */
+  --color-on-secondary: #CEB59E; /* Toasted Almond */
+  
+  --color-tertiary: #3A2922; /* Dark Umber */
+  --color-on-tertiary: #CEB59E;
+  
+  --color-black: #3A2922; /* Dark Umber for Prices/Categories */
+  --color-white: #E8E1D5; /* Linen White */
+  
+  /* GRAY SCALE */
+  --color-gray-50: #E8E1D5;
+  --color-gray-100: #E8E1D5;
+  --color-gray-200: #CEB59E;
+  --color-gray-300: #CEB59E;
+  --color-gray-400: #88937B;
+  --color-gray-500: #88937B;
+  --color-gray-600: #A46447;
+  --color-gray-700: #4C362D;
+  --color-gray-800: #626A56; /* Dark Muted Sage for Service Names */
+  --color-gray-900: #3A2922;
+
+  --color-neutral-50: #E8E1D5;
+  --color-neutral-100: #E8E1D5;
+  --color-neutral-200: #CEB59E;
+  --color-neutral-300: #CEB59E;
+  --color-neutral-400: #88937B;
+  --color-neutral-500: #88937B;
+  --color-neutral-600: #A46447;
+  --color-neutral-700: #4C362D;
+  --color-neutral-800: #626A56;
+  --color-neutral-900: #3A2922;
+
+  --color-outline: #88937B;
+  --color-outline-variant: #4C362D;
+  --color-inverse-surface: #3A2922;
+  --color-inverse-on-surface: #E8E1D5;
+  --color-on-surface-variant: #4C362D;
 
   --font-headline: "Noto Serif", serif;
   --font-body: "Manrope", sans-serif;
@@ -58,16 +69,17 @@
 
 @layer utilities {
   .marble-bg {
-    background-color: #d5d4d2;
-    background-image: linear-gradient(45deg, rgba(0,0,0,0.05) 25%, transparent 25%, transparent 50%, rgba(0,0,0,0.05) 50%, rgba(0,0,0,0.05) 75%, transparent 75%, transparent);
+    background-color: #CEB59E; /* Toasted Almond */
+    background-image: linear-gradient(45deg, rgba(58,41,34,0.05) 25%, transparent 25%, transparent 50%, rgba(58,41,34,0.05) 50%, rgba(58,41,34,0.05) 75%, transparent 75%, transparent);
     background-size: 100px 100px;
-    color: #1b1c1b;
+    color: #3A2922;
   }
   .text-glow { 
-    text-shadow: 0 0 15px rgba(255,255,255,0.3); 
+    text-shadow: 0 0 15px rgba(232, 225, 213, 0.4); 
+    color: #E8E1D5 !important;
   }
   .silver-glow { 
-    box-shadow: 0 0 40px rgba(255, 255, 255, 0.08); 
+    box-shadow: 0 0 40px rgba(58, 41, 34, 0.15); /* Dark glow */
   }
   .hide-scrollbar::-webkit-scrollbar { display: none; }
   .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
@@ -79,6 +91,51 @@
   .animate-fade-in {
     animation: fade-in-up 0.3s ease-out forwards;
   }
+
+  /* ENSURE READABILITY ON SAGE CONTAINERS (Quotes, Footer) */
+  .bg-surface-container, .bg-surface-container\/80, .bg-surface-container\/95 {
+    color: #E8E1D5 !important; /* Linen White text on Muted Sage */
+  }
+  .bg-surface-container .text-secondary,
+  .bg-surface-container .text-on-surface-variant,
+  .bg-surface-container .text-on-background,
+  .bg-surface-container\/80 .text-secondary,
+  .bg-surface-container\/80 .text-on-surface-variant,
+  .bg-surface-container\/80 .text-on-background,
+  .bg-surface-container\/95 .text-secondary,
+  .bg-surface-container\/95 .text-on-surface-variant,
+  .bg-surface-container\/95 .text-on-background {
+    color: #E8E1D5 !important;
+  }
+  .bg-surface-container .text-tertiary,
+  .bg-surface-container\/80 .text-tertiary,
+  .bg-surface-container\/95 .text-tertiary {
+    color: #3A2922 !important; /* Dark Umber */
+  }
+
+  /* LINEN WHITE BOX (Booking Box) */
+  .bg-surface-container-lowest, .bg-surface-container-lowest\/90 {
+    color: #3A2922 !important; /* Dark Umber Text */
+  }
+  .bg-surface-container-lowest .text-secondary,
+  .bg-surface-container-lowest .text-on-surface-variant,
+  .bg-surface-container-lowest .text-on-background,
+  .bg-surface-container-lowest\/90 .text-secondary,
+  .bg-surface-container-lowest\/90 .text-on-surface-variant,
+  .bg-surface-container-lowest\/90 .text-on-background {
+    color: #4C362D !important;
+  }
+
+  /* INPUT PLACEHOLDERS inside Booking Box */
+  .bg-surface-container-lowest\/90 input::placeholder,
+  .bg-surface-container-lowest\/90 textarea::placeholder {
+    color: rgba(58, 41, 34, 0.5) !important;
+  }
+  
+  /* BORDERS inside Booking Box */
+  .bg-surface-container-lowest\/90 .border-outline-variant {
+    border-color: rgba(58, 41, 34, 0.2) !important;
+  }
 }
 
 .material-symbols-outlined {
@@ -87,7 +144,7 @@
 
 body {
   font-family: 'Manrope', sans-serif; 
-  background-color: #050505; 
-  color: #e5e2e1;
+  background-color: var(--color-background); 
+  color: var(--color-on-background);
   min-height: max(884px, 100dvh);
 }

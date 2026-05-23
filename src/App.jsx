@@ -36,11 +36,11 @@ function App() {
       <ScrollToTop />
       
       {/* Global Navigation */}
-      <header className={`fixed top-0 w-full z-50 transition-all duration-500 border-b ${scrolled ? 'bg-surface-container/80 backdrop-blur-xl border-white/10 py-4 shadow-2xl' : 'bg-transparent border-transparent py-6'}`}>
+      <header className={`fixed top-0 w-full z-50 transition-all duration-500 border-b ${scrolled ? 'bg-surface-container/80 backdrop-blur-xl border-white/10 py-4 shadow-2xl text-black' : `bg-transparent border-transparent py-6 ${location.pathname === '/' ? 'text-white' : 'text-black'}`}`}>
         <div className="max-w-screen-xl mx-auto px-6 flex justify-between items-center">
           <Link to="/" className="font-noto-serif text-2xl tracking-tighter font-medium text-glow flex items-center gap-2">
             <span className="material-symbols-outlined text-tertiary">face_retouching_natural</span>
-            Maan's
+            Manas
           </Link>
           <nav className="hidden md:flex gap-8">
             <Link to="/" className="text-xs uppercase tracking-[0.2em] hover:text-tertiary transition-colors">Home</Link>
@@ -79,7 +79,7 @@ function App() {
           <div className="col-span-1 md:col-span-2 space-y-6">
             <Link to="/" className="font-noto-serif text-3xl tracking-tighter text-glow flex items-center gap-2">
               <span className="material-symbols-outlined text-tertiary text-4xl">face_retouching_natural</span>
-              Maan's Unisex Salon
+              Manas Unisex Salon
             </Link>
             <p className="font-manrope text-sm text-secondary max-w-sm leading-relaxed">
               Elevating the art of grooming and styling in Hyderabad. A sanctuary for the modern aesthetic.
@@ -90,7 +90,7 @@ function App() {
             <ul className="space-y-3 font-manrope text-sm text-secondary">
               <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[16px]">schedule</span> 10:00 AM - 9:00 PM</li>
               <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[16px]">call</span> +91 91608 56138</li>
-              <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[16px]">mail</span> maansalon@info.com</li>
+              <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[16px]">mail</span> manassalon@info.com</li>
             </ul>
           </div>
           <div className="space-y-4 flex justify-end items-end pb-2">
@@ -100,7 +100,7 @@ function App() {
           </div>
         </div>
         <div className="max-w-screen-xl mx-auto mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="font-manrope text-[10px] uppercase tracking-widest text-secondary opacity-60">© 2024 Maan's Unisex Salon. All Rights Reserved.</p>
+          <p className="font-manrope text-[10px] uppercase tracking-widest text-secondary opacity-60">© 2024 Manas Unisex Salon. All Rights Reserved.</p>
           <div className="flex gap-4">
             {/* Social icons */}
             <div className="w-8 h-8 rounded-full bg-surface flex items-center justify-center border border-white/5 hover:border-tertiary transition-colors cursor-pointer">
